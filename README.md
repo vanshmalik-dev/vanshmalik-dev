@@ -1,16 +1,16 @@
-## Hi there 👋
+<!-- ===== THEME-AWARE HERO BANNER ===== -->
+<!-- GitHub automatically shows dark.svg in dark mode and light.svg in light mode -->
 
-<!--
-**vanshmalik-dev/vanshmalik-dev** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/vanshmalik-dev/vanshmalik-dev/main/dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/vanshmalik-dev/vanshmalik-dev/main/light.svg">
+  <img alt="Arif Hasan" src="https://raw.githubusercontent.com/vanshmalik-dev/vanshmalik-dev/main/light.svg">
+</picture>
 
-Here are some ideas to get you started:
+<!-- ===== GITHUB STATS ===== -->
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<div align="center">
+  <img width="49%" src="./profile/stats.svg" alt="stats" />
+  <img width="49%" src="./profile/top-langs.svg" alt="top langs" />
+</div>
+
