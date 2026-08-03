@@ -38,8 +38,8 @@
 
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/vanshmalik-dev/vanshmalik-dev/output/github-snake-dark.svg?v=2" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/vanshmalik-dev/vanshmalik-dev/output/github-snake.svg?v=2" />
-    <img width="100%" alt="GitHub Contribution Snake" src="https://raw.githubusercontent.com/vanshmalik-dev/vanshmalik-dev/output/github-snake.svg?v=2" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/vanshmalik-dev/vanshmalik-dev/output/github-snake-dark.svg?v=5" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/vanshmalik-dev/vanshmalik-dev/output/github-snake.svg?v=5" />
+    <img width="100%" alt="GitHub Contribution Snake" src="https://raw.githubusercontent.com/vanshmalik-dev/vanshmalik-dev/output/github-snake.svg?v=5" />
   </picture>
 </div>
