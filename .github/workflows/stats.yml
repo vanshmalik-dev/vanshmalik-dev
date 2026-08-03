@@ -2,8 +2,8 @@ name: Generate Stats Cards
 
 on:
   schedule:
-    - cron: "0 */12 * * *" # Har 12 ghante me automatic run hoga
-  workflow_dispatch: # Actions tab se manually run karne ka option
+    - cron: "0 */12 * * *"
+  workflow_dispatch:
 
 jobs:
   build:
@@ -14,20 +14,38 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Generate stats card
+      # --- DARK MODE CARDS ---
+      - name: Generate dark stats card
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: stats
           options: username=${{ github.repository_owner }}&show_icons=true&count_private=true&include_all_commits=true&hide_rank=true&hide_border=true&title_color=22D3EE&icon_color=A78BFA&text_color=94A3B8&bg_color=0A101F
-          path: profile/stats.svg
+          path: profile/stats-dark.svg
           token: ${{ secrets.PAT_1 }}
 
-      - name: Generate top languages card
+      - name: Generate dark top languages card
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: top-langs
           options: username=${{ github.repository_owner }}&layout=compact&langs_count=8&hide_border=true&title_color=22D3EE&text_color=94A3B8&bg_color=0A101F
-          path: profile/top-langs.svg
+          path: profile/top-langs-dark.svg
+          token: ${{ secrets.PAT_1 }}
+
+      # --- LIGHT MODE CARDS ---
+      - name: Generate light stats card
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: stats
+          options: username=${{ github.repository_owner }}&show_icons=true&count_private=true&include_all_commits=true&hide_rank=true&hide_border=true&title_color=089182&icon_color=7C3AED&text_color=333333&bg_color=ffffff
+          path: profile/stats-light.svg
+          token: ${{ secrets.PAT_1 }}
+
+      - name: Generate light top languages card
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: top-langs
+          options: username=${{ github.repository_owner }}&layout=compact&langs_count=8&hide_border=true&title_color=089182&text_color=333333&bg_color=ffffff
+          path: profile/top-langs-light.svg
           token: ${{ secrets.PAT_1 }}
 
       - name: Commit cards
@@ -35,5 +53,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add profile/*.svg
-          git commit -m "Update README cards" || exit 0
+          git commit -m "Update light and dark README cards" || exit 0
           git push
