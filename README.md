@@ -20,16 +20,16 @@
   
   <!-- 2. GitHub Stats Card -->
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/vanshmalik-dev/vanshmalik-dev/main/profile/stats-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/vanshmalik-dev/vanshmalik-dev/main/profile/stats-light.svg" />
-    <img width="49%" src="https://raw.githubusercontent.com/vanshmalik-dev/vanshmalik-dev/main/profile/stats-light.svg" alt="stats" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/vanshmalik-dev/vanshmalik-dev/main/profile/stats-dark.svg?v=1" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/vanshmalik-dev/vanshmalik-dev/main/profile/stats-light.svg?v=1" />
+    <img width="49%" src="https://raw.githubusercontent.com/vanshmalik-dev/vanshmalik-dev/main/profile/stats-light.svg?v=1" alt="stats" />
   </picture>
 
   <!-- 3. Top Languages Card -->
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/vanshmalik-dev/vanshmalik-dev/main/profile/top-langs-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/vanshmalik-dev/vanshmalik-dev/main/profile/top-langs-light.svg" />
-    <img width="49%" src="https://raw.githubusercontent.com/vanshmalik-dev/vanshmalik-dev/main/profile/top-langs-light.svg" alt="top langs" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/vanshmalik-dev/vanshmalik-dev/main/profile/top-langs-dark.svg?v=1" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/vanshmalik-dev/vanshmalik-dev/main/profile/top-langs-light.svg?v=1" />
+    <img width="49%" src="https://raw.githubusercontent.com/vanshmalik-dev/vanshmalik-dev/main/profile/top-langs-light.svg?v=1" alt="top langs" />
   </picture>
 </div>
 
