@@ -27,9 +27,15 @@ jobs:
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: top-langs
-          # Added count_private=true here!
           options: username=${{ github.repository_owner }}&count_private=true&layout=compact&langs_count=8&hide_border=true&title_color=22D3EE&text_color=94A3B8&bg_color=0A101F&card_width=500
           path: profile/top-langs-dark.svg
+          token: ${{ secrets.PAT_1 }}
+
+      - name: Generate dark streak card
+        uses: DenverCoder1/github-readme-streak-stats@main
+        with:
+          options: user=${{ github.repository_owner }}&hide_border=true&background=0A101F&stroke=22D3EE&ring=A78BFA&fire=10B981&currStreakLabel=22D3EE&sideLabels=94A3B8&currStreakNum=F8FAFC&sideNums=F8FAFC&dates=64748B&titleColor=22D3EE&card_width=1180
+          path: profile/streak-dark.svg
           token: ${{ secrets.PAT_1 }}
 
       # --- LIGHT MODE CARDS ---
@@ -45,15 +51,22 @@ jobs:
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: top-langs
-          # Added count_private=true here!
           options: username=${{ github.repository_owner }}&count_private=true&layout=compact&langs_count=8&hide_border=true&title_color=089182&text_color=333333&bg_color=ffffff&card_width=500
           path: profile/top-langs-light.svg
           token: ${{ secrets.PAT_1 }}
 
+      - name: Generate light streak card
+        uses: DenverCoder1/github-readme-streak-stats@main
+        with:
+          options: user=${{ github.repository_owner }}&hide_border=true&background=ffffff&stroke=089182&ring=7C3AED&fire=108981&currStreakLabel=089182&sideLabels=333333&currStreakNum=111111&sideNums=111111&dates=333333&titleColor=089182&card_width=1180
+          path: profile/streak-light.svg
+          token: ${{ secrets.PAT_1 }}
+
+      # --- COMMIT EVERYTHING ---
       - name: Commit cards
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add profile/*.svg
-          git commit -m "Update light and dark README cards" || exit 0
+          git commit -m "Update all stats and streak cards" || exit 0
           git push
